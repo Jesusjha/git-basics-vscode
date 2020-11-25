@@ -4,12 +4,12 @@ describe("exercise-06", () => {
   test("create a new branch named develop and create a commit", async () => {
     let [branches, count] = await Promise.all([
       git.branch(),
-      git.raw(["rev-list", "develop", "^master", "--count"]),
+      git.raw(["rev-list", "develop", "^main", "--count"]),
     ]);
 
     expect(branches.current).toBe("develop");
 
-    expect(branches.all).toContain("master");
+    expect(branches.all).toContain("main");
     expect(branches.all).toContain("develop");
 
     let n = Number(count);

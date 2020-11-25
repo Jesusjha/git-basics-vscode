@@ -9,18 +9,16 @@ describe("exercise-08", () => {
       git.status(),
     ]);
 
-    expect(status.current).toBe("master");
-    expect(status.tracking).toBe("origin/master");
-    expect(branches.branches.hasOwnProperty("remotes/origin/master")).toBe(
-      true
+    expect(status.current).toBe("main");
+    expect(status.tracking).toBe("origin/main");
+    expect(branches.branches.hasOwnProperty("remotes/origin/main")).toBe(true);
+
+    expect(branches.branches.main.commit).toBe(
+      branches.branches["remotes/origin/main"].commit
     );
 
-    expect(branches.branches.master.commit).toBe(
-      branches.branches["remotes/origin/master"].commit
-    );
-
-    expect(branches.all).toContain("master");
-    expect(branches.all).toContain("remotes/origin/master");
+    expect(branches.all).toContain("main");
+    expect(branches.all).toContain("remotes/origin/main");
 
     expect(remotes).toHaveLength(1);
     expect(remotes[0].name).toBe("origin");
