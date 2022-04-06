@@ -29,8 +29,8 @@
   "dependencies": {
     "@types/jest": "^25.2.1",
     "git-tools": "^0.3.0",
-    "jest": "^25.5.2",
-    "simple-git": "^2.2.0"
+    "jest": "^27.5.1",
+    "simple-git": "^3.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
